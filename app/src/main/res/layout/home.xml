@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/headerLayout"
+                layout="@layout/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACARA DI TAHUN 2023"
+                android:textColor="@color/white"
+                android:textSize="32dp"
+                android:layout_marginTop="50px"
+                android:paddingLeft="110px"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:paddingTop="40px"
+                android:id="@+id/imageView"
+                android:layout_width="329dp"
+                android:layout_height="207dp"
+                android:paddingLeft="220px"
+                app:srcCompat="@drawable/bannerbiru" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="330dp"
+                android:layout_height="227dp"
+                android:paddingLeft="220px"
+                app:srcCompat="@drawable/bannerijo" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="344dp"
+                android:layout_height="231dp"
+                android:paddingLeft="220px"
+                app:srcCompat="@drawable/bannerpink" />
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemTextColor="@drawable/item_selector"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
